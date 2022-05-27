@@ -5,18 +5,18 @@ public class Menu {
         PessoaDao pd = new PessoaDao();
 
         try {
-            //incluir uma pessoa
-            Pessoa pessoa1=new Pessoa(1,"Jose","jose@gmail.com");
-            Pessoa pessoa2=new Pessoa(2,"Joáo","joao@gmail.com");
-            pd.incluirPessoa(pessoa1);
-            pd.incluirPessoa(pessoa2);
+         //incluir uma pessoa
+            Pessoa pessoa1=new Pessoa(7,"Jose","jose@gmail.com");
+            Pessoa pessoa2=new Pessoa(8,"Joáo","joao@gmail.com");
+          pd.incluirPessoa(pessoa1);
+          pd.incluirPessoa(pessoa2);
 
 
             //alterar uma pessoa
             //verificar se o código da pessoa existe
             //alterar a informação desejada usando o set(Classe encapsulada)
 
-            Pessoa pessoa= pd.consultarPessoaIndividual(2);
+            Pessoa pessoa= pd.consultarPessoaIndividual(3);
             System.out.println("pessoa: "+pessoa);
             pessoa.setEmail("joao2gmail.com");
 
@@ -40,7 +40,7 @@ public class Menu {
             pd.excluirPessoa(pessoa1);
 
             //listando todas as pessoas
-            List<Pessoa> listPessoa=pd.ListarPessoas();
+          List<Pessoa> listPessoa=pd.ListarPessoas();
 
             for (Pessoa p:listPessoa) {
                 System.out.println(p);
